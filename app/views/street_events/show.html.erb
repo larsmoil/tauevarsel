@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Street:</b>
+  <%= @street_event.street %>
+</p>
+
+<p>
+  <b>Stretch:</b>
+  <%= @street_event.stretch %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @street_event.date %>
+</p>
+
+<p>
+  <b>Time of day:</b>
+  <%= @street_event.time_of_day %>
+</p>
+
+
+<%= link_to 'Edit', edit_street_event_path(@street_event) %> |
+<%= link_to 'Back', street_events_path %>

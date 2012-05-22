@@ -1,0 +1,29 @@
+<h1>Listing street_events</h1>
+
+<table>
+  <tr>
+    <th>Street</th>
+    <th>Stretch</th>
+    <th>Date</th>
+    <th>Time of day</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @street_events.each do |street_event| %>
+  <tr>
+    <td><%= street_event.street %></td>
+    <td><%= street_event.stretch %></td>
+    <td><%= street_event.date %></td>
+    <td><%= street_event.time_of_day %></td>
+    <td><%= link_to 'Show', street_event %></td>
+    <td><%= link_to 'Edit', edit_street_event_path(street_event) %></td>
+    <td><%= link_to 'Destroy', street_event, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Street event', new_street_event_path %>
