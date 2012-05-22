@@ -1,6 +1,8 @@
 Tauevarsel::Application.routes.draw do
   resources :street_events
 
+  root :to => 'street_events#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
