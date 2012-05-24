@@ -19,4 +19,12 @@ class StreetEvent < ActiveRecord::Base
   def to_s
     "#{street}, stretch: #{stretch}, date: #{date}, time_of_day: #{time_of_day}"
   end
+
+  def self.search(search)
+    if search
+      where('date = ?', "#{search}")
+    else
+      scoped
+    end
+  end
 end

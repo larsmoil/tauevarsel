@@ -2,7 +2,7 @@ class StreetEventsController < ApplicationController
   # GET /street_events
   # GET /street_events.json
   def index
-    @street_events = StreetEvent.all
+    @street_events = StreetEvent.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
