@@ -15,5 +15,8 @@ class StreetEvent < ActiveRecord::Base
   validates :street, presence: true
   validates :stretch, presence: true
   validates :date, presence: true
-  validates :time_of_day, presence: true
+
+  def to_s
+    "#{street}, stretch: #{stretch}, date: #{date}, time_of_day: #{time_of_day}"
+  end
 end
